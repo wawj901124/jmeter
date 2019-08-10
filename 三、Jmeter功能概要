@@ -72,5 +72,39 @@
         是用来对测试结果数据进行处理和可视化展示的一系列元件。图形结果、查看结果树、聚合
     报告。都是我们经常用到的元件。注意：这个监听器可不是用来监听系统资源的元件。
 
+Jmeter有两种类型的控制器：取样器（sample）和逻辑控制器（Logic Controller）,用这些元件来
+驱动处理一个测试
+
+10.取样器（sample）
+        取样器（Sample）是性能测试中向服务器发送请求，记录响应信息，记录响应时间的最小
+    单元，Jmeter原生支持多种不同sample,如 HTTP Request Sampler、FTP Request Sample、
+    TCP Request Sample、JDBC Request Sample 等，每一种不同类型的sample可以根据设置的参
+    数向服务器发出不同类型的请求。
+
+11.逻辑控制器
+        逻辑控制器（Logic Controller）,包括两类元件，一类是用于控制test plan 中sample
+    节点发送请求的逻辑顺序的控制器，常用的有 如果（If）控制器、switch Controller、
+    Runtime Controller、循环控制器等。另一类是用来组织可控制sample来节点的，如 事务控
+    制器、吞吐量控制器。
+        Jmeter16个逻辑控制器详解：https://cloud.tencent.com/developer/article/1200055
+        一、简单控制器（Simple Controller）
+        二、循环控制器（Loop Controller）
+        三、仅一次控制器（Once Only Controller）
+        四、ForEach控制器（ForEach Controller）
+        五、事务控制器（Transaction Controller）
+        六、If 控制器（If Controller）
+        七、Switch控制器（Switch Controller）
+        八、吞吐量控制器(Throughput Controller)
+        九、随机控制器(Random Controller)
+        十、随机顺序控制器(Random Order Controller)
+        十一、Critical Section Controller关键部分控制器
+        十二、Include Controller 引用外部测试计划控制器
+        十三、Interleave Controller 间隔控制器
+        十四、Module Controller 模块控制器
+        十五、Runtime Controller 运行时间控制器
+        十六、While Controller 循环控制器
+
+
+
 
 
