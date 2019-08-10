@@ -103,6 +103,7 @@ Jmeter有两种类型的控制器：取样器（sample）和逻辑控制器（Lo
         十四、Module Controller 模块控制器
         十五、Runtime Controller 运行时间控制器
         十六、While Controller 循环控制器
+        十七、Recording Controlle（录制控制器）
 
 
 
