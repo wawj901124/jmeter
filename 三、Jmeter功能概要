@@ -1,0 +1,76 @@
+1.Jmeter工具组成部分
+        资源生成器：用于生成测试过程中服务器、负载机的资源代码。（LR中的VuGen）
+        用户运行器：通常是一个脚本运行引擎，根据脚本要求模拟指定的用户行为。（LR中的Controller）
+        报表生成器：根据测试中实时的数据生成报表，提供可视化的数据显示方式。（LR中的Analysis）
+        负载发生器：用于产生负载，通常是以多线程或是多进程的方式模拟用户行为。（LR中LoadGenerators）
+
+        Test Plan(测试计划)：
+            用来描述一个性能测试，包括与本次性能测试所有相关的功能，也就说本次性能测试的所有内容
+        是基于一个计划的。
+
+2.Threads(Users)线程 用户
+        1.setup thread group
+            一种特殊类型的ThreadGroup，可用于执行测试前操作。（类型LR的init()）
+
+        2.teardown thread group
+            一种特殊类型的ThreadGroup，可用于执行测试后操作。（类型LR的end()）
+
+        3.thread group(线程组)
+            这个就是我们通常添加运行的线程。可以看作一个虚拟用户组，线程组中的每个线程都可以理
+        解为一个虚拟用户。线程组中包含的线程数量在测试执行过程中是不会发生改变的。（类似LR的action()）
+
+3.测试片段（Test Fragment）
+        测试片段元素是控制器上的一种特殊的线程组，它在测试树上与线程组处于一个层级。它与
+    线程组有所不同，因为它不被执行，除非它是一个模块控制器或者是被控制器所引用时才会被执行。
+
+以下是线程组的8类可执行元件:
+
+4.配置元件（Config Element）
+        配置元件（Config Element）用于提供对静态数据配置的支持。如CSV Data Set config可
+    以将本地数据文件形成数据池（Data Pool）。
+
+5.定时器（Timer）
+        定时器（Timer）用于操作之间设置等待时间，等待时间是性能测试中常用的控制客户端QPS
+    的手段。类似于LoadRunner里面的“思考时间”。JMeter定义了Bean Shell Timer、
+    Constant Throughput Timer（常数吞吐量定时器）、固定定时器等不同类型的Timer。
+        Jmeter九种定时器介绍：https://www.cnblogs.com/wxinyu/p/7687063.html
+        1、固定定时器（Constant Timer）
+        2、高斯随机定时器（Gaussian Random Timer）
+        3、均匀随机定时器（Uniform Random Timer）
+        4、固定吞吐量定时器（Constant Throughput Timer）
+        5、同步定时器（Synchronizing Timer）
+        6、BeanShell定时器（BeanShell Timer）
+        7、泊松随机定时器（Poisson Random Timer）
+        8、JSR223定时器（JSR223 Timer）
+        9、BSF定时器（BSF Timer）
+
+6.前置处理器（Pre Processors）
+        用于在实际的请求发出之前对即将发出的请求进行特殊处理。例如，HTTP URL重写修复符则
+    可以实现URL重写，当URL中有sessionID一类的session信息时，可以通过该处理器填充发出请求
+    的实际的sessionID。
+        Jmeter八种前置处理器介绍：https://blog.csdn.net/df0128/article/details/80953755
+        1、HTML Link Parser(HTML链接解析器)
+        2.HTTP URL Re-writing Modifier（HTTP URL重写修改器）
+        3.User Parameters（用户参数）
+        4.JDBC PreProcessor(数据库预处理器)
+        5.RegEx User Parameters(正则表达式)
+        6、Sample Timeout(超时器)
+        7、JSR223 PreProcessor(JSR223预处理器，用于调用脚本)
+        8、BeanShell PreProcessor(BeanShell预处理器)
+
+7.后置处理器（Post Processors）
+        用于对Sample发出请求后得到的服务器响应进行处理。一般用来提取响应中的特定数据（
+    类似LoadRunner测试工具中的关联概念）。
+
+
+8.断言（Assertions）
+        断言用于检查测试中得到的相应数据等是否符合预期，断言一般用来设置检查点，用以保证性
+    能测试过程中的数据交互是否与预期一致。
+
+
+9.监听器（Listener）
+        是用来对测试结果数据进行处理和可视化展示的一系列元件。图形结果、查看结果树、聚合
+    报告。都是我们经常用到的元件。注意：这个监听器可不是用来监听系统资源的元件。
+
+
+

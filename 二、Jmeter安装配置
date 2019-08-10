@@ -1,0 +1,39 @@
+1.安装配置好Jdk,
+        下载网址：https://www.cr173.com/soft/33894.html
+
+2.Jmeter下载地址：http://jmeter.apache.org/download_jmeter.cgi
+                  Binaries 下的文件
+        下载后，解压文件到任意目录，避免在有空格的路径安装Jmeter,
+    这将导致远程测试出现问题。
+
+3.Jmeter启动：
+        解压下载包，bin目录下运行 jmeter.bat(windows下)启动ApacheJMeter.jar。
+
+4.Jmeter文件目录介绍：
+        bin:可执行文件目录
+        Bin目录文件：
+            jmeter.bat: windows 的启动文件
+            jmeter.log: 日志文件
+            jmeter.sh: linux的启动文件
+            jmeter.properties: 系统配置文件
+            jmeter-server.bat: windows分布式测试压要用到的服务器配置
+            jmeter-server: linux分布式测试要用到的服务器配置
+
+        docs:接口文档目录
+            docs文件夹下的api文件夹下的index.html: 接口文档首页
+
+        extras:扩展插件目录
+
+        lib:所用到的插件目录。
+            里面全是jar包，Jmeter会自动在JMETER_HOME/lib和ext目录
+        下寻找需要的类。
+
+        licenses:jmeter证书目录
+
+        printable_docs:用户使用手册
+            printable_docs文件夹下usermanual文件夹下的index.html: 用户手册首页
+
+
+
+
+
