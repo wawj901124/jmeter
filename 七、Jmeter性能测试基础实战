@@ -1,0 +1,120 @@
+1.测试需求：
+        测试20个用户访问http://www.51zxw.net在负载达到50QPS时的平均响应
+    时间。
+        QPS：Query Per Second每秒查询率。是一台查询服务器每秒能够处理的
+    查询次数。在因特网上，作为域名系统服务的性能经常用每秒查询率来衡量。
+
+2.测试步骤：
+        第一步：添加线程组
+                线程组主要包含三个参数：线程数、准备时长（Pamp-Up Period(
+            in seconds)）、循环次数。
+                    线程数：虚拟用户数。一个虚拟用户占用一个进程或线程。设
+                置多少虚拟用户数在这里也就是设置多少个线程数。
+                    准备时长（单位为s）:设置的虚拟用户数需要多长时间全部启
+                动。如果线程数为20，准备时长为10，那么需要10秒钟启动20个线
+                程。也就是每秒钟启动2个线程。
+                    循环次数：每个线程发送请求的次数。如果线程数为20，循环
+                次数为5，那么每个线程发送5次请求。总请求数为20*5=100。如果
+                勾选了“永远”，那么所有线程会一直发送请求，直到选择停止运
+                行脚本。
+
+        第二步：增添HTTP请求
+                一个HTTP请求有着许多的配置参数，下面将详细介绍：
+                        名称（Name）：本属性用于标识一个取样器，建议使用一个
+                    有意义的名称.
+                        注释（Comments）：用于测试没有任何作用，仅用户记录用
+                    户可读的注释信息。
+                        服务器名称或IP（Server Name or IP）：HTTP请求发送的目
+                    标服务器名称或IP地址。
+                        端口号（Port Number）：目标服务器的端口号，默认值为80.
+                        Timeouts（mulliseconds）：设置请求和响应的超时时间。
+                        协议（Protocol）：向目标服务器发送HTTP请求时的协议，可
+                    以是http或者https,默认值为http。
+                        方法（Method）：发送HTTP请求的方法，可用方法包括Get、
+                    Post、HEAD、PUT、OPTIONS、TRACE、DELETE等。
+                        Content encoding：内容的编码方式，默认值为ios8859
+                        路径（Path）：目标URL路径（不包括服务器地址和端口）。
+                        自动重定向（Redirect Automatically）：如果选中该选项，
+                    当发送HTTP请求后得到的响应是302/301时，JMeter自动重定向到
+                    新的页面。
+                        Use KeepAlive：当该选项被选中时，jmeter和目标服务器中间
+                    使用Keep-Alive方式（又称持久连接、连接重用）进行HTTP通信，
+                    默认选中。
+                        Use multipart/form-data for HTTP POST:当发送HTTP POST
+                    请求时，使用Use multipart/form-data 方法发送，默认不选中。
+                        Save response as MD5 hash?：选中该项，在执行时仅记录服
+                    务端响应数据的MD5值，而不记录完整的响应数据。在需要进行数
+                    据量非常大的测试时，建议选中该项以减少取样器记录响应数据的
+                    开销。
+
+                    tips 默认时间单位是毫秒 报告输出文件后缀 .jtl
+
+
+        第三步：设置QPS限制
+                Jmeter提供了一个非常有用的定时器，称为Constant Throughput Timer
+            （常数吞吐量定时器），该定时器可以方便地控制给定的取样器发送请求的
+            吞吐量。
+
+                Constant Throughput Timer的主要属性介绍：
+                        Target throughput(in samples per minute):目标吞吐量。注
+                    意这里是每分钟发送的请求数，实际填的数值为：60*QPS.
+                        其次，Calculate Throughput based on:有5个选项，分别是：
+                                this thread only：控制每个线程的吞吐量，选择这
+                            种模式时，总的吞吐量为设置target Throunghput 乘以该
+                            线程的数量。
+                                All active threads：设置的target Throughput将分
+                            配在每个活跃线程上，每个活跃线程在上一次运行结束后
+                            等待合理的时间后再次运行。活跃线程指同一时刻同时运
+                            行的线程。
+                                All active threads(shared)：与All active threads
+                            的选项基本相同，唯一的区别是，没有活跃线程都会在所有
+                            活跃线程上一次运行结束后等待合理的时间后再次运行。
+                                All active threads in current thread group：设置
+                            的target Throughput 将分配在当前线程组的每一个活跃线
+                            程上，当测试计划中只有一个线程组时，该选项和All active
+                            threads 选项的效果完全相同。
+                                All active threads in current thread group（shared）：
+                            与All active threads in current thread group基本相同，唯
+                            一的区别是，每个活跃线程都会在所有活跃线程的上一次运行结
+                            束后等待合理的时间后再次运行。
+
+        第四步：添加监视器
+                脚本的主要部分设置完成后，需要通过某种方式获得性能测试中的测试结果，在
+            本例中，我们关心的是请求的响应时间。
+                Jmeter中使用监听器元件收集取样器记录的数据并以可视化的方式来呈现。Jmeter
+            有各种不同的监听器类型，我们可再添加聚合报告，更为直观的查看测试结果。
+                添加聚合报告，右键点击线程组，在弹出的菜单（添加--->监听器--->聚合报告）
+            中选择聚合报告。
+                添加查看结果树（添加--->监听器--->查看结果树）
+
+        第五步：运行脚本
+
+        第六步：聚合报告分析
+
+            Term                           Definition
+            Label              每个JMeter的element（例如HTTP Requests）都有一个Name属性，这里
+                               显示的就是Name属性的值
+            #Samples           表示你这次测试中一共发出了多少个请求，如果模拟10个用户，每个用
+                               户迭代10次，那么这里显示100
+            Average            平均响应时间---默认情况下是单个Request的平均响应时间，当使用了
+                               Transaction Controller 时，也可以以Transaction 为单位显示平均
+                               响应时间。
+            Median             中位数，也就是50%用户的响应时间
+            90%Line            90%用户的响应时间
+            Min                最小响应时间
+            Max                最大响应时间
+            Error%             本次测试中出现错误的请求的数量/请求的总和。
+            Throughput         吞吐量---默认情况下表示每秒完成的请求数（Request per Second）,
+                               当使用了Transaction Controller 时，也可以表示类似Loadrunner的
+                               Transaction per Second 数
+            KB/sec             每秒从服务器端接收到的数据量，相当于LoadRunner中的Throughput/Sec
+
+            响应时间单位：毫秒
+
+
+
+
+
+
+
+
