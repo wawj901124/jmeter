@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e45836f0-7c2a-4704-b6b9-0c52bb6837e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/十一、Jmeter关联" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/十、Jmeter图形监控扩展" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/十一、Jmeter FTP服务器连接" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/十三、Jmeter分布式测试" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/十二、Jmeter mysql测试" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/十四、Jmeter Java工程测试" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,13 +68,18 @@
         <counts>
           <entry key="九、Jmeter参数化" value="590" />
           <entry key="八、Jmeter断言（检查点）" value="352" />
+          <entry key="十、Jmeter图形监控扩展" value="496" />
           <entry key="十、Jmeter集合点" value="74" />
+          <entry key="十一、Jmeter FTP服务器连接" value="378" />
           <entry key="十一、Jmeter关联" value="638" />
+          <entry key="十三、Jmeter分布式测试" value="1388" />
+          <entry key="十二、Jmeter mysql测试" value="178" />
+          <entry key="十四、Jmeter Java工程测试" value="676" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1654" />
+          <entry key="PLAIN_TEXT" value="4770" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,13 +89,18 @@
           <entry key="三、Jmeter功能概要" value="1" />
           <entry key="九、Jmeter参数化" value="3" />
           <entry key="八、Jmeter断言（检查点）" value="2" />
+          <entry key="十、Jmeter图形监控扩展" value="1" />
           <entry key="十、Jmeter集合点" value="3" />
+          <entry key="十一、Jmeter FTP服务器连接" value="1" />
           <entry key="十一、Jmeter关联" value="1" />
+          <entry key="十三、Jmeter分布式测试" value="1" />
+          <entry key="十二、Jmeter mysql测试" value="1" />
+          <entry key="十四、Jmeter Java工程测试" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -94,10 +108,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/十一、Jmeter关联">
+        <entry file="file://$PROJECT_DIR$/十四、Jmeter Java工程测试">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="304">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -117,6 +131,11 @@
         <option value="$PROJECT_DIR$/十、Jmeter集合点" />
         <option value="$PROJECT_DIR$/九、Jmeter参数化" />
         <option value="$PROJECT_DIR$/十一、Jmeter关联" />
+        <option value="$PROJECT_DIR$/十、Jmeter图形监控扩展" />
+        <option value="$PROJECT_DIR$/十一、Jmeter FTP服务器连接" />
+        <option value="$PROJECT_DIR$/十二、Jmeter mysql测试" />
+        <option value="$PROJECT_DIR$/十三、Jmeter分布式测试" />
+        <option value="$PROJECT_DIR$/十四、Jmeter Java工程测试" />
       </list>
     </option>
   </component>
@@ -127,10 +146,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="876" />
-    <option name="y" value="101" />
+    <option name="x" value="995" />
+    <option name="y" value="111" />
     <option name="width" value="744" />
-    <option name="height" value="580" />
+    <option name="height" value="581" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -215,14 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565839232970</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="更新">
+      <created>1565841811928</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565841811928</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="862" y="143" width="744" height="581" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28984576" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.6696658" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -304,20 +330,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/九、Jmeter参数化">
+    <entry file="file://$PROJECT_DIR$/九-1、Jmeter参数化">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/十、Jmeter集合点">
+    <entry file="file://$PROJECT_DIR$/九-2、Jmeter集合点">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/十一、Jmeter关联">
+    <entry file="file://$PROJECT_DIR$/九-3、Jmeter关联">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/十、Jmeter图形监控扩展">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/十一、Jmeter FTP服务器连接">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/十二、Jmeter mysql测试">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/十三、Jmeter分布式测试">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/十四、Jmeter Java工程测试">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>

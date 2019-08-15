@@ -1,0 +1,40 @@
+背景：
+    由于Jmeter本身的瓶颈，当需要模拟数以千计的并发用户时，使用单台机器模拟所有的并发
+用户就有些力不从心，甚至还会引起JAVA内存溢出的错误。要解决这个问题，可以使用分布式测
+试，运行多台机器运行所谓的Agent来分担JMeter自身的压力，并借此来获取更大的并发用户数，
+但是需要进行相关的一些修改，具体如下。
+
+操作步骤：
+    1.安装Jmeter，并确定其中一台机器为Controller，其他的机器作为Agent。然后运行所有
+Agent机器上的JMeter-server.bat文件---假定我们使用两台机器192.168.0.11和192.168.0.12
+作为Agent；（Agent机器上必须安装jdk,并设置环境变量）
+
+    2.在Controller 机器的 %JMeter_home%/bin下，编辑JMeter.properties中“remote_hosts=
+ 127.0.0.1”。其中的127.0.0.1表示运行Jmeter Agent的机器，这里需要修改为“remote_hosts
+ =192.168.0.11:1099,192.168.0.12:1099”---其中的1099为端口号。
+
+    3.启动controller机器上的jmeter.bat,选择菜单Run中的“Remote Start”中的192.168.0.11:1099
+和192.168.0.12:1099来运行Agent。
+
+    4.如果要让某个电脑执行，可以点击该电脑IP地址就可以，如果两个都要执行，可以点击Run
+菜单下的“远程运行全部”菜单
+
+    5.有时用作代理的机器太少，仍不能满足需要，则需要将作为Controller的电脑也当作Agent，
+则同时需要修改JMeter.properties文件，将Controller 的IP地址写入。同时，这个时候，需要先打
+开Controller电脑中Jmeter下bin目录下的jmeter-server.bat,然后再打开JMeter.bat,此时，进入Run
+->Remote Start菜单，可以看到Controller也作为远程机器进行运行。
+
+
+常见问题：
+    1.确定在controller机器上安装jdk版本和jmeter一致
+    2.Agent 机器启动Jmeter_server.bat时，后台提示：“could not find ApacheJmeter_core.jar”
+            解决方法：这个是开始没有找到ApacheJmeter_core.jar,如果不希望看到Could not find的
+        字样，需要添加环境变量JMETER_HOME，路径为bin目录的上一级目录，这样启动jmeter-server
+        服务时，就不会看到could not Found ApacheJMeter_cor.jar
+
+    3.Jmeter分布式控制过程中，各个Agent启动的线程数等于线程组中的配置。
+
+
+
+
+

@@ -1,0 +1,5 @@
+1.准备一个有测试数据表的mysql数据库
+2.在测试计划面板点击“浏览...(Browse...)”按钮，将你的JDBC驱动添加进来。
+3.添加一个线程组，右键点击“线程组”，在下面添加一个JDBC Connection Configuration：
+        线程组--->添加--->配置元件（Config Element）--->JDBC Connection Configuration
+  并配置好各项参数

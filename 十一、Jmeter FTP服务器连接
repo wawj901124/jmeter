@@ -1,0 +1,15 @@
+1.创建一个线程组
+2.线程组--->添加---->配置元件--->FTP请求缺省值（FTP Request Defaults）
+3.线程组--->添加--->Sampler--->FTP请求（FTP Request）
+
+    说明：
+        Server Name or IP：为你FTP服务的IP
+        Remote File：为你FTP服务器上的文件
+        Local File：为本地你存放到本机上的路径
+        选择 get(RETR) 为下载方式
+        登录配置（Login Configguration）：填写你的FTP服务器的用户名和密码
+
+4.按照第3步再添加一个“FTP”请求，选择put为上传方式。
+
+5.添加一个监控器：
+    线程组--->添加--->监控器--->Spline Visualizer（jmeter3以上移除此功能）

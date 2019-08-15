@@ -1,0 +1,22 @@
+插件下载：https://jmeter-plugins.org/
+下载jmeter-plugins-manager-1.3.jar
+
+1.首先将jmeter-plugins-manager-1.3.jar包复制到Jmeter的Lib目录下面的ext目录下面，然后重新启动
+2.打开Jmeter，选择“Options”下 “Plugins Manager”，选择“Available Plugins”安装
+    jmeter常用插件介绍：https://www.cnblogs.com/imyalost/p/7751981.html
+
+3.重新打开jmeter;
+4.添加--->监视器--->jp@gc - Transactions per Second
+
+Transactions per Second：
+        TPS：每秒事务数，性能测试中，最重要的2个指标之一。该插件的作用是在测试脚本执行过
+    程中，监控查看服务器的TPS表现————比如整体趋势、实时平均值走向、稳定性等。
+
+Response Times Over Time：
+        TRT：事务响应时间，性能测试中，最重要的两个指标的另外一个。该插件的主要作用是在
+    测试脚本执行过程中，监控查看响应时间的实时平均值、整体响应时间走向等。
+
+PerfMon Metrics Collector：
+        服务器性能监控数据采集器。在性能测试过程中，除了监控TPS和TRT，还需要监控服务器的
+    资源使用情况，比如CPU、memory、I/O等。该插件可以在性能测试中实时监控服务器的各项资源
+    使用。

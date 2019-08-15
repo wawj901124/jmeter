@@ -1,0 +1,16 @@
+1.在eclipse里面新建一个工程
+2.从Jmeter的安装目录lib/ext中引入两个文件“ApacheJmeter_core.jar”和“ApacheJMeter_java.jar”
+到java工程
+3.编写jmeter辅助函数
+                              JMeter Java Sampler介绍
+       Arguments                     getDefaultparameters()用户获取界面的参数
+
+       SampleResult                  runTest（JavaSamplerContext context）类似于LR的Action，
+                                     result.sampleStart()一个事务开始，result.sampleEnd()一
+                                     个事务结束
+       void                          setupTest(JavaSamplerContext context)初始化方法，类似于
+                                     LR的init和Junit中的setUp()
+
+       void                          teardownTest(javaSamplerContext context)类似于LR的end和
+                                     Junit中的tearDown()
+
