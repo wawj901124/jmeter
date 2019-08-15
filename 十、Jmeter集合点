@@ -1,0 +1,3 @@
+Jmeter集合点
+        操作步骤： Add--->定时器（Timer）--->Synchronizing Timer（同步定时器）
+        注意：集合点要放在需要集合的元件前面

@@ -1,0 +1,25 @@
+1.用户参数（User Parameters）
+        前置处理器--->用户参数
+
+2.CSV数据配置（CSV Data Set Config）
+        配置元件--->CSV Data Set Config
+
+                Filename:参数项文件；
+                File Encoding：文件的编码方式，一般为空；
+                Vaiable Names(comma-delimited)：文件中各列所表示的参数项；各参数项之间利用逗号分隔；
+            参数项的名称应该与HTTP Requests 中的参数项一致；
+                Delimiter（use '\t'for tab）：如文件中使用的是逗号分隔，则填写逗号；如使用的是TAB，
+            则填写\t；
+                Recycle on EOF?：True时表示当读取文件到结尾时，再重头读取文件；False时表示当读取文
+            件到结尾时，停止读取文件；
+                Stop thread on EOF?：当Recycle on EOF?一项为False时起效；True表示当读取文件到结尾
+            时，停止进程。
+
+3.随机参数化
+        __Random
+            The minimum value allowed for a range of (最小值设置)，例如设置1
+            The maximum value allowed for a range of （最大值设置），例如设置100
+            点击“Genrate & Copy to clipboard” 生成变量参数如：${__Random(1,100,)}，复制到参数的值
+        中即可使用
+
+

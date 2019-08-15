@@ -2,4 +2,34 @@
 此需要检测机制提高测试准确性。下面介绍常用的jmeter三种断言：
 
     1.响应断言（Response Assertion）：
-        
+            模式匹配规则（Pattern Matching Rules）：
+                   包括（Contains）：返回结果包括你指定的内容
+                   匹配（Matches）：根据指定内容进行匹配
+                   Equals：返回结果与你指定结果一致
+                   Substring：返回结果是指定结果的字串
+                   否（Not）：不进行匹配
+
+    2.Size Assertion（Size断言）：
+
+    3.Duration Assertion（持续时间断言）：
+            如果响应时间大于设置的响应时间，则断言失败，否则成功！
+
+
+    断言详解：https://blog.csdn.net/yy19890521/article/details/82152257
+
+        1、BeanShell断言（针对sampler中的Bean Shell sampler而使用的断言）
+        2、BSF断言（针对sampler中的BSF sampler而使用的断言）
+        3、比较断言（compare  assertion）
+        4、HTML断言（针对sampler中的SOAP/XML-RPC Request而使用的断言）
+        5、JSR223断言（针对sampler中的JSR223 sampler而使用的断言）
+        6、MD5Hex断言（针对参数类型为MD5Hex加密的参数的断言）
+        7、Size断言（字节大小断言）
+        8、SMIME断言（邮件断言）
+        9、XML概要断言（XML Schema Assertion）
+        10、XML断言
+        11、XPath断言
+        12、响应断言
+        13、断言持续时间（Duration Assertion）（服务器响应时间断言）
+
+
+
