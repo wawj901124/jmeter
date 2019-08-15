@@ -1,0 +1,24 @@
+正则表达式：
+        添加（add）--->后置处理器--->正则表达式提取器（Regular Expression Extractor）
+
+        正则表达式部分配置说明：
+                1.引用名称（Name of created variable）：
+                        下一个请求要引用的参数名称，如填写activityID,则可用$(activityID)引用它。
+
+                2.正则表达式（Regular Expression）：
+                        ()括起来的部分就是要提取的。
+                         .匹配任何字符串。
+                         +：一次或多次。
+                         ？：在找到第一个匹配项后停止。
+
+                3.模板（Template（$i$ Where i is capturing group number,start at 1））：
+                        用$$引用起来，如果在正则表达式中有多个正则表达式（多个括号括起来的东东），
+                    则可以是$2$$3$等等，表示解析到的第几个值给title,如$1$表示解析到的第1个值.
+
+                4.匹配数字（0代表随机）（Match No.(0 for Random)）：
+                        0代表随机取值，1代表全部取值
+                5.缺省值（Default Value）：
+                        如果参数没有取到值，那默认给一个值让它取。
+
+        Webtours关联要在in=home来进行设置
+        关联设置例如正则表达式 name =userSession value=(.*)
