@@ -14,3 +14,21 @@
        void                          teardownTest(javaSamplerContext context)类似于LR的end和
                                      Junit中的tearDown()
 
+       执行的先后顺序为：
+            getDefaultParameters()--->setupTest(JavaSampleContext context)--->runTest(JavaSample
+       Context context)--->teardownTest(JavaSamplerContext  context)
+
+       常用的方法：
+            1.addArgument("name","value")定义参数
+            2.sampleStart()定义事务的开始，类似于LR的lr_start_transaction,和LR一样事务间不要放
+       无关代码
+            3.sampleEnd()定义事务的结束，类似于lr_end_transaction
+            4.setSuccessful(true、false)设置运行结果的成功或失败，Jmeter统计成功失败的次数，在
+       聚合报告中能够体现。
+
+4.将工程导出成Jar，放置于$jmeter安装目录$/lib/ext/下，其它依赖的Jar放置于 $安装目录/lib/下
+
+5.运行脚本
+        选中主界面左侧的“测试计划”，右键菜单->添加->Threads(Users)->线程组
+
+
