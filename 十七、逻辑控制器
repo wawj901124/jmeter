@@ -1,0 +1,3 @@
+    Jmeter 中的Logic Controller 用于Test Plan中的节点添加逻辑控制器。
+    JMeter 中的Logic Controller 分为两类：一类用来控制Test Plan 执行过程中
+节点的逻辑执行顺序 
