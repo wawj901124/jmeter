@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e45836f0-7c2a-4704-b6b9-0c52bb6837e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/十四-jmeter_test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/十五、Jmeter函数" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,12 +70,13 @@
           <entry key="十一、Jmeter关联" value="638" />
           <entry key="十三、Jmeter分布式测试" value="1388" />
           <entry key="十二、Jmeter mysql测试" value="178" />
+          <entry key="十五、Jmeter函数" value="419" />
           <entry key="十四、Jmeter Java工程测试" value="1455" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="5549" />
+          <entry key="PLAIN_TEXT" value="5968" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -92,12 +93,13 @@
           <entry key="十一、Jmeter关联" value="1" />
           <entry key="十三、Jmeter分布式测试" value="1" />
           <entry key="十二、Jmeter mysql测试" value="1" />
+          <entry key="十五、Jmeter函数" value="1" />
           <entry key="十四、Jmeter Java工程测试" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
     </session>
@@ -105,10 +107,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/十四-jmeter_test.java">
+        <entry file="file://$PROJECT_DIR$/十五、Jmeter函数">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-878">
-              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="285">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -134,6 +136,7 @@
         <option value="$PROJECT_DIR$/十三、Jmeter分布式测试" />
         <option value="$PROJECT_DIR$/十四、Jmeter Java工程测试" />
         <option value="$PROJECT_DIR$/jmeter_test.java" />
+        <option value="$PROJECT_DIR$/十五、Jmeter函数" />
       </list>
     </option>
   </component>
@@ -144,8 +147,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="801" />
-    <option name="y" value="80" />
+    <option name="x" value="891" />
+    <option name="y" value="112" />
     <option name="width" value="744" />
     <option name="height" value="581" />
   </component>
@@ -279,14 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565863251780</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="更新">
+      <created>1565920836106</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1565920836106</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="891" y="112" width="744" height="581" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26092544" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.45467836" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -422,8 +432,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/十四-jmeter_test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-878">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="414">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/十五、Jmeter函数">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
