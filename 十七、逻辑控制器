@@ -5,3 +5,14 @@
         另一类则与节点逻辑执行顺序无关，用于对于Test Plan中的脚本进行分组、方便
     JMeter 统计执行结果以及进行脚本的运行时控制等，如：Throughput Controller、
     Transaction Controller。
+
+    1.控制Test Plan 中的节点执行顺序的Logic Controller
+
+    1.1. ForEach Controller
+            该逻辑控制器只要用于多个读取自定义变量值。
+            添加--->配置元件--->用户自定义变量（User Defined Variables），定义变量注
+        意命名格式：变量名+下划线+数字（从1开始计数）之所以这样命名是为了满足以后
+        ForEach控制器提取数据。
+
+            添加--->逻辑控制器--->ForEach控制器
+
