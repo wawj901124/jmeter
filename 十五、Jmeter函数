@@ -33,7 +33,28 @@
                         表示读取文件中以逗号分割符隔开的第一个值
 
         2.__StringFromFile 函数
-            StringFromFile函数是从一个文件中读取一个字符串
+            StringFromFile函数是从一个文件中读取一个字符串，用来实现参数化，如果读取或者打开这个文件发生
+        错误时，将会返回“**ERR**”字符串。
+            1.在jmeter中的【选项】中选择【函数助手对话框】（Tools--->Function Helper Dialog），
+        选择__StringFromFile:
+                    Enter path (absolute or relative) to file(输入文件的全路径)：输入读取文件的绝对路径+文
+                件名。
+                    Name of variable in which to store the result (optional)：存储结果的变量名称（选填）
+                    Start file sequence number (opt)：初始序列号（选填）
+                    Final file sequence number (opt)：结束序列号（选填）
+
+        3.__Counter 函数
+            每次调用计数器函数都会产生一个新值，从1开始每次加1。计数器既可以被配置成针对每个虚拟用户是独
+        立的，也可以被配置成所有虚拟用户公用的。如果每个虚拟用户的计数器是独立增长的，那么通常被用于记录
+        测试计划运行了多少遍。全局计数器通常被用于记录发生了多少次请求。计数器使用一个整数值来记录，允许
+        的最大值为2,147,483,647。
+                 第一个参数（TRUE, for each user to have own counter, FALSE for a global counter）：True，
+             如果测试人员希望每个虚拟用户的计数器保持独立，与其他用户的计数器相区别。False，全局计数器。
+                 第二个参数（Name of variable in which to store the result (optional)）：重用计数器函数创
+             建值的引用名。测试人员可以这样引用计数器的值：$(test)。这样一来，测试人员就可以创建一个计数器
+             后，在多个地方引用它的值。（选填）
+
+
 
 
 
