@@ -15,3 +15,28 @@
     注意：如果使用和内置函数同样的名字定义一个自定义变量，你的自定义静态变量会覆盖内置函数，
 但不建议名字相同。
 
+
+    Jmeter常用内置函数：
+        1.__csvRead 函数
+            __csvRead函数是从外部读取参数，__csvRead函数可以从一个文件中读取多个参数。
+            1.先新建一个文件，例如csvRead.txt,里面的数据存放如下：（数据之间必须有半角逗号来分割）
+                    11，22，33，44
+            2.在jmeter中的【选项】中选择【函数助手对话框】（Tools--->Function Helper Dialog）
+                说明：
+                    CSV file to get values from | *alias：要读取的文件路径，为绝对路径
+                            参数值如：D:\工作内容\工作内容\
+                    Column number of CSV file | next | *alias：从第几行开始读取，注意第一列是0
+                            参数值如：0 或者 ${__Random(0,3,e)}(表示生成随机数0到3之间的一个，且赋值给变量e)
+            3.设置好相关参数，将生成的函数复制到相应的请求参数之中。
+                点击 “Generate & Copy to clipboard”,生成的函数语法如：
+                        ${__CSVRead(D:\工作内容\工作内容\shuju.txt,0)}
+                        表示读取文件中以逗号分割符隔开的第一个值
+
+        2.__StringFromFile 函数
+
+
+
+
+
+
+
