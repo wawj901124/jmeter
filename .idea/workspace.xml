@@ -68,7 +68,7 @@
           <entry key="十、Jmeter集合点" value="74" />
           <entry key="十一、Jmeter FTP服务器连接" value="378" />
           <entry key="十一、Jmeter关联" value="638" />
-          <entry key="十七、逻辑控制器" value="547" />
+          <entry key="十七、逻辑控制器" value="896" />
           <entry key="十三、Jmeter分布式测试" value="1388" />
           <entry key="十二、Jmeter mysql测试" value="178" />
           <entry key="十五、Jmeter函数" value="1802" />
@@ -78,7 +78,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="9558" />
+          <entry key="PLAIN_TEXT" value="9907" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -113,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/十七、逻辑控制器">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="316">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -153,8 +153,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="870" />
-    <option name="y" value="220" />
+    <option name="x" value="593" />
+    <option name="y" value="68" />
     <option name="width" value="958" />
     <option name="height" value="588" />
   </component>
@@ -372,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565950540387</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="更新">
+      <created>1565951021799</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1565951021799</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="870" y="220" width="958" height="588" extended-state="0" />
+    <frame x="593" y="68" width="958" height="588" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.67866325" />
@@ -536,8 +543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/十七、逻辑控制器">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="316">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
         </state>
       </provider>
     </entry>
