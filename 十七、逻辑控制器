@@ -1,3 +1,7 @@
     Jmeter 中的Logic Controller 用于Test Plan中的节点添加逻辑控制器。
-    JMeter 中的Logic Controller 分为两类：一类用来控制Test Plan 执行过程中
-节点的逻辑执行顺序 
+    JMeter 中的Logic Controller 分为两类：
+        一类用来控制Test Plan 执行过程中节点的逻辑执行顺序，如：Loop Controller、
+    If Controller 等；
+        另一类则与节点逻辑执行顺序无关，用于对于Test Plan中的脚本进行分组、方便
+    JMeter 统计执行结果以及进行脚本的运行时控制等，如：Throughput Controller、
+    Transaction Controller。
