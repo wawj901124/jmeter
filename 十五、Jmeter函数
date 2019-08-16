@@ -24,7 +24,7 @@
             2.在jmeter中的【选项】中选择【函数助手对话框】（Tools--->Function Helper Dialog）
                 说明：
                     CSV file to get values from | *alias：要读取的文件路径，为绝对路径
-                            参数值如：D:\工作内容\工作内容\
+                            参数值如：D:\工作内容\工作内容\shuju.txt
                     Column number of CSV file | next | *alias：从第几行开始读取，注意第一列是0
                             参数值如：0 或者 ${__Random(0,3,e)}(表示生成随机数0到3之间的一个，且赋值给变量e)
             3.设置好相关参数，将生成的函数复制到相应的请求参数之中。
@@ -33,6 +33,7 @@
                         表示读取文件中以逗号分割符隔开的第一个值
 
         2.__StringFromFile 函数
+            StringFromFile函数是从一个文件中读取一个字符串
 
 
 
