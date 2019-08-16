@@ -21,4 +21,19 @@ Manager、HTTP Cookie Manager、HTTP Header Manager、HTTP Request Defaults等�
          为该Sampler设置了Assertion检查响应体中的制定内容是否存在，该Assertion就会失效。
 
     4.HTTP Cookie Manager（HTTP Cookie 管理器）
-            该属相管理器用于管理Test Plan 运行时的所有Cookie。（）
+            该属性管理器用于管理Test Plan 运行时的所有Cookie。（存储在用户本地终端上的数据）
+         HTTP Cookie Manager 可以自动存储服务器发送给客户端的所欲cookie。
+            同时，用户也可以在HTTP Cookie Manager 中手工添加一些Cookie，这些被手工添加的
+         Cookie会在发送请求时被自动附件到请求。
+
+            注意：JMeter 的 HTTP Cookie Manager 会为Thread Group 中的每个线程设置一个单独的会
+         话区域来管理该线程的所有Cookie，也就是说，每个线程的会话Cookie 是完全独立的（与浏览
+         器行为一致），但用户在HTTP Cookie Manager中手工添加的Cookie 则被所有线程共享。
+                如果选中“Clear cookies each iteration?”此项，意味着线程在每次迭代时清除自己
+          会话中的所有Cookie。
+
+    5.HTTP Header Manager(HTTP 头文件管理器)
+            该属性管理器用于定制Sampler发出的HTTP请求的请求头文件的内容。不同的浏览器发出的
+         HTTP请求具有不同的Agent，访问某些有防盗链的页面时需要正确的Refer..这些情况下都需要
+         通过HTTP Header Manager 来保证发送HTTP请求时正确的。
+
