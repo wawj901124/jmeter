@@ -1,0 +1,24 @@
+    Test Plan的配置元件中有一些和HTTP属性相关的元件：HTTP Cache Manager、HTTP Authorization
+Manager、HTTP Cookie Manager、HTTP Header Manager、HTTP Request Defaults等，这些元件有什么
+作用呢？原因是JMeter 不是浏览器，因此其行为并不和浏览器完全一致。这些JMeter提供的HTTP属性管
+理器用于尽可能模拟浏览器的行为，在HTTP协议层上定制发送给被测应用的HTTP请求。
+
+    1.HTTP Request Defaults（HTTP 请求默认值）
+            该属性管理器用于设置其作用范围内的所有HTTP的默认值，可被设置的内容包括HTTP请求的
+        host、端口、协议等。一个Test Plan 中可以有多个HTTP Request Dafaults，处于多个HTTP
+        Request Defaults 作用域内的Sampler 使用HTTP Request Defaults 中设置值的叠加值。
+
+    2.HTTP Authorization Manager（HTTP 授权管理器）
+            该属性管理器用于设置自动对一些需要NTLM验证（NTLM是Windows NT 早期版本的标准安全协
+        议）的页面进行认证和登录。
+
+    3.HTTP Cache Manager（HTTP 缓存管理）
+            该属性管理器用于模拟浏览器的Cache行为。为Test Plan 增加该属性管理器后，Test Plan
+         运行过程中会使用Last-Modified、ETag和Expired等决定是否从Cache中获取相应的元素。
+
+            注意：如果Test Plan中的某个Sample请求的元素是被Cache的元素，则Test Plan 在运行过
+         程中会直接从Cache 中读取该元素，这样Sampler得到的返回值就会是空。在这种情况下，如果
+         为该Sampler设置了Assertion检查响应体中的制定内容是否存在，该Assertion就会失效。
+
+    4.HTTP Cookie Manager（HTTP Cookie 管理器）
+            该属相管理器用于管理Test Plan 运行时的所有Cookie。（）
