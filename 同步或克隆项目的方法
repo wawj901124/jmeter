@@ -1,9 +1,9 @@
 1.运行git-cmd.exe;
 2.d:
   cd  工程路径
-3.执行命令：git remote set-url origin https://github.com/wawj901124/jmeter
+3.执行命令：git remote set-url origin https://github.com/wawj901124/jmeter.git
 
-	其中https://github.com/wawj901124/jmeter是github工程路径
+	其中https://github.com/wawj901124/jmeter.git 是github工程路径
 
 
 
