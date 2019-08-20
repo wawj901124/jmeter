@@ -1,0 +1,46 @@
+持续集成:
+    持续集成是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也
+就意味着每天可能发生多次集成。每次集成都通过自动化的构建（包括编译，发布，自动化测试）来验证，从而
+尽快地发现集成错误。许多团队发现这个过程可以大大减少集成的问题，让团队能够更快的开发内聚的软件。
+    Jenkins 是基于Java开发的一种持续集成工具，用于监控持续重复的工作，功能包括：持续的软件版本发布/
+测试项目，监控外部调用执行的工作
+
+项目构建：
+    通过构建工具对多个项目文件进行统一批量的编译和运行。比如，对多个Jmeter脚本批量运行。
+    Apache Ant ,是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境
+中的软件开发。
+
+Ant安装配置：
+        1.下载安装
+            下载地址：http://ant.apache.org/bindownload.cgi
+
+            下载 zip包，解压放在任意盘符，随后进行环境变量配置（windows为例）
+                ANT_HOME    c:/apache-ant-1.9.0
+                path        c:/apache-ant-1.9.0/bin
+                classpath   c:/apache-ant-1.9.0/lib
+
+            在DOS界面输入如下命令：{Ant 安装位置}\bin ant -version
+            如果出现版本信息，则说明安装成功，但如果出现'ant'不是内部或外部命令，也不是可运行的程序或
+        批处理文件，说明安装失败。
+
+        ant配置教程：https://www.cnblogs.com/xbxxf/p/9719301.html
+        jdk配置教程：https://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html
+
+Jenkins安装配置：
+        1.Jenkins下载：https://jenkins.io/zh/download/
+
+            可以下载war包或windows安装包等，解压后放在一个磁盘空间大的盘符，然后点击setup.exe,安装完成后
+        在浏览器中输入：http://localhost:8080(默认8080端口)如果8080端口被占，修改jenkin安装目录下的配置
+        文件：jenkins.xml 中的httpPort=8080,如下图，我已经修改成了8081端口号。
+
+        jenkins安装使用教程：https://www.cnblogs.com/lsdb/p/10112844.html
+        Jenkins安装修改默认路径和端口的方法：https://www.cnblogs.com/Jourly/p/7462816.html
+        jenkins 的默认用户名和密码，及启动方法：https://blog.csdn.net/neymar_jr/article/details/78970535
+
+Jenkins+Ant+Jmeter自动化测试平台搭建
+
+        操作步骤：
+            1.录制jmeter脚本（章节2-6）
+            2.将Jmeter的安装目录下的extras目录中"ant-jmeter-1.1.1.jar"这个jar包放到ant的{安装目录}\lib
+        目录下（此处很关键！）
+            3.配置Jmeter的build.xml配置文件

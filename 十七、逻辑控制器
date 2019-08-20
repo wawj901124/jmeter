@@ -24,3 +24,70 @@
                 从数组变量的第二位开始，遍历3次，即：51zxw2,51zxw3,51zwx4,
                     输出变量名称（Output variable name）：我们将每一次得到的用户自定义
                 变量user存储到参数foreach_user 中。
+    1.2. If Controller
+            类似与编程语言中if语句，根据给定表达式的值决定是否执行该节点下的子节点。
+            注意：
+                条件判断语句如果是字符串一定要在参数前加引号，如："${foreach_user}" == "51zxw1"。
+                如果选中“Evaluate for all Children”选项，则该Controller 在每个子节点执行时执行一次，否则，该
+            Controller 仅在入口执行一次。
+
+    1.3. Interleave Controller (交替控制器)
+            在每次迭代时，顺序选取该节点下的一个子节点执行。
+            如果选中“Ignore sub-controller blocks”选项，则该Controller 将其下的子Controller 当成单一元素处理，
+        并允许每个子Controller 一次发出一个请求。
+
+    1.4. Loop Controller(循环控制器)
+            简单地为其下的子节点运行指定次数。
+
+    1.5. Once Only Controller(仅一次控制器)
+            是为了让Test Plan中的某些内容在整个Test Plan的执行期间每个子线程仅执行一次（例如，每个线程仅需
+        要执行一次"登录"操作），如：将Once Only Controller 作为Loop Controller 的子节点，Once Only Controller
+        在每次循环第一次迭代时均会被执行。
+
+    1.6. Random Controller (随机控制器)
+            每次执行时，从其子节点中随机选取一个来执行。
+
+    1.7. Random Order Controller(随机顺序控制器)
+            每次执行时，按照随机产生的顺序执行其下的所有子节点。注意，该Controller 与Random Controller
+        的不同之处在于，Random Controller 只选择执行其所有子节点中的一个，而Random Order Controller 则
+        按照随机顺序全部执行该Controller 下的所有子节点。
+
+    1.8. Switch Controller
+            类似程序语言中的switch 函数，该Controller 根据给定的值n(可以使用参数)选择执行其下的第n+1个子
+        节点。需要注意的是，Switch Controller 只接受整数值，并且给定的值n是以0为基础的，因此当给定的值为
+        “2”时，意味着该Controller 下的第3个子节点会被执行。同时，Switch Controller 接受参数作为其值。
+
+    1.9. While Controller
+            该控制器时另一个用于控制循环的Controller.可以为Controller 设置一个Conditions(条件)其中
+         Condition的取值可以为以下三者之一：
+                1.空：如果Conditon取值为空，则该Condition 迭代执行Controller下所有子节点，直到最后一
+            个子节点返回失败为止。需要注意的是，如果不是最后一个子节点失败，而是该Controller中的其他
+            子节点失败，该Controller不会停止，而会继续循环执行过程。
+                2.LAST：如果Condition取值为字符串LAST，则该Controller 迭代执行Controller 下所有子节点，
+            直到最后一个子节点返回失败为止（与Controller为空时的行为相同），同时，如果该Controller的上
+            一个节点失败，则该Test Plan 在执行时不会进入该Controller。
+                3.表达式：除了为空和LAST外，Controller还可以取一个表达式。当Controller取值为表达式时，
+            如果表达式的取值是字符串false,While Controller就退出循环，以下列出了几个可用的表达式：
+                    ${VAR}:当参数VAR的值被设置为false时退出循环
+                    ${__javascript("${VAR}" == " 51zxw") }:当参数VAR的值不为51zxw时退出循环。
+
+
+    2.非控制Test Plan 中的节点执行顺序的Logic Controller
+
+    2.1. 事务控制器（Transaction Controller）
+                事务控制器会生成一个额外的采样器来测量其下测试元素的总体时间。值得注意的是，这个时间
+            包含该控制器范围内的所有处理时间，而不仅仅是采样器的。
+                Name:事务控制器的名称
+                Generate parent sample:如果选中，事务采样器作为其下采样器的父采样器，否则，作为额外采
+            样器添加在子采样器的后面。
+
+                补充说明：
+                    对于Jmeter2.3以上的版本，有两种模式的操作
+                        1.事务采样器是添加到其下采样器后面的
+                        2.事务采样器是作为其下采样器的父采样器。
+                        生成的事务采样器的测量的时间包括其下采样器以及其他的一切时间。由于时钟频率的问
+                    题，这个时间可能略大于单个采样器的时间之和。时钟开始时间介于控制器记录开始时间与第
+                    一个采样器开始之间，时钟结束时间亦然。
+                        事务采样器只有在其自采样器都成功的情况下才显示成功。
+                        在父模式下，事务控制器下的各个采样器只有在 the Tree View Listener里才能看到。同
+                    时，子采样器的数据也不会在CSV文件中显示，但是在XML文件中可以看到。
