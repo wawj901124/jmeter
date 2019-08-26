@@ -44,3 +44,47 @@ Jenkins+Ant+Jmeter自动化测试平台搭建
             2.将Jmeter的安装目录下的extras目录中"ant-jmeter-1.1.1.jar"这个jar包放到ant的{安装目录}\lib
         目录下（此处很关键！）
             3.配置Jmeter的build.xml配置文件
+                Jmeter Ant xml配置文件
+                    1.Ant关键元素
+                        Ant的构建文件是基于XML编写的，默认名称为build.xml
+                        project 元素是Ant构建文件的根元素，Ant构建文件至少应该包含一个project元素，否则会
+                    发生错误。在每个project元素下，可包含多个target元素。接下来熟悉project元素的各属性。
+                            1.name属性
+                                用于指定project元素的名称。
+                            2.default属性
+                                用于指定project默认执行时所执行的target的名称。
+                            3.basedir属性
+                                用于指定jmeter基路径的位置，该属性没有指定时，使用Ant的构建文件的附目录作为基准目录。
+                    2.target元素
+                        它为Ant的基本执行单元，它可以包含一个或多个具体的任务。多个target可以存在相互依赖关系。
+                    它有如下属性：
+                            1.name属性
+                                指定target元素的名称，这个属性在一个project元素中时唯一的。我们可以通过指定target元
+                            素的名称来指定某个target。
+                            2.depends属性
+                                用于描述target之间的依赖关系，若与多个target存在依赖关系时，需要以“,”间隔。Ant会依
+                            照depends属性中target出现的顺序依次执行每个target.被依赖的target会先执行。
+                            3.if属性
+                                用于验证指定的属性是否存在，若不存在，所在target将不会被执行。
+                            4.unless属性
+                                该属性的功能与if属性的功能正好相反，它也用于验证指定的属性是否存在，若不存在，所在
+                            target将会被执行。
+                            5.description属性
+                                该属性是关于target功能的简短描述和说明。
+
+                    3.property元素
+                        该元素可看作参量或者参数的定义，project的属性可以通过property元素来设定，也可以在Ant之外
+                    设定。若要在外部引入某文件，例如build.properties文件，可以通过如下内容将其引入：
+                        <property file="build.properties"/>
+
+            4.使用Ant编译验证Jmeter的build文件（注意将配置好的build.xml文件放在ant目录的bin目录下）
+                将build_jmeter.xml文件放在ant目录的bin目录
+            5.部署到持续集成平台jenkins
+                创建一个自由风格的项目
+                项目配置中
+                    增加构建步骤选择：Invoke Ant
+                    Build File中填写build_jmeter.xml文件路径，例如“C:\ant\bin\build_jmeter.xml”
+                点击立即构建执行
+
+                ant编译build_jmeter.xml的cmd命令：ant -buildfile build_jmeter.xml
+
