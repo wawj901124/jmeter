@@ -88,3 +88,7 @@ Jenkins+Ant+Jmeter自动化测试平台搭建
 
                 ant编译build_jmeter.xml的cmd命令：ant -buildfile build_jmeter.xml
 
+                jmeter执行的结果类型就是jtl的类型
+
+                jmeter5.1.1编译成功教程：https://www.cnblogs.com/Bella-gan123/p/11110733.html
+
